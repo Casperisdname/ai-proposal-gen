@@ -54,7 +54,7 @@ export default function Home() {
     setCopied(false)
 
     try {
-      const res = await fetch('/api/generate', {
+      const res = await fetch('http://localhost:8000/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ description: input }),
