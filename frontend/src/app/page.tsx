@@ -54,11 +54,14 @@ export default function Home() {
     setCopied(false)
 
     try {
-      const res = await fetch('http://localhost:8000/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ description: input }),
-      })
+      const res = await fetch(
+        'https://ai-proposal-generator-api.onrender.com/generate',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ description: input }),
+        },
+      )
 
       if (!res.ok) throw new Error('API request failed')
 
