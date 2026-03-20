@@ -9,14 +9,23 @@ You are a senior freelance consultant.
 Given this job description:
 {job_description}
 
-Return:
+Return STRICTLY in this format:
 
-1. Proposal (client-focused, persuasive)
-2. Pricing (range + reasoning)
-3. Contract (basic clauses)
-4. Risk Assessment (bullet points)
+=== PROPOSAL ===
+Write a strong, client-focused proposal.
 
-Be structured and clear.
+=== PRICING ===
+Suggest a price range and explain why.
+
+=== CONTRACT ===
+Write a simple contract with:
+- Scope
+- Timeline
+- Payment terms
+- Ownership
+
+=== RISKS ===
+List possible risks or red flags.
 """
 
     response = client.chat.completions.create(
