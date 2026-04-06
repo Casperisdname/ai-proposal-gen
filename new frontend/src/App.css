@@ -1,0 +1,407 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+/* NAVBAR */
+
+.logo-container {
+  padding-left: 20px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.navbar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+.nav-links li {
+  list-style: none;
+}
+
+.nav-btn {
+  background-image: linear-gradient(to right, #eaafc2, #96bbc9);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.main-page {
+  padding-top: 80px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.left-side {
+  max-width: 580px;
+}
+
+.main-page h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.main-page p {
+  font-size: 20px;
+}
+
+.main-page button {
+  width: 200px;
+  height: 50px;
+  border-radius: 32px;
+  background-image: linear-gradient(to right, #eaafc2, #96bbc9);
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.right-side {
+  position: relative;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  background: #0b19de;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.right-side img {
+  width: 350px;
+  position: relative;
+  z-index: 1;
+}
+
+/* PROPOSAL SECTION */
+
+.proposal-page {
+  width: 90%;
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 40px 20px;
+  border-radius: 32px;
+  text-align: center;
+  background-color: #ffffff80;
+  position: relative;
+}
+
+.pheader {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.pdescription {
+  font-size: 18px;
+}
+
+.proposal-input1 {
+  width: 90%;
+  max-width: 650px;
+  height: 70px;
+  border-radius: 32px;
+  border: none;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.proposal-button {
+  background-image: linear-gradient(to right, #eaafc2, #96bbc9);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 300px;
+  height: 70px;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.proposal-architecture {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.proposal-input2 {
+  width: 90%;
+  max-width: 600px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  resize: none;
+}
+/* PROPOSAL TABS */
+
+.proposal-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  border-radius: 30px;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.tab {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tab.active {
+  background: linear-gradient(to right, #eaafc2, #96bbc9);
+  color: white;
+}
+
+/* HOW IT WORKS */
+
+.how {
+  text-align: center;
+  color: white;
+  margin-top: 100px;
+}
+
+.howHeading {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.howList {
+  list-style: none;
+  width: 300px;
+  margin: 30px auto;
+  padding: 0;
+}
+
+.hl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hl img {
+  width: 40px;
+}
+
+.howline {
+  width: 90%;
+  max-width: 600px;
+  height: 6px;
+  background-image: linear-gradient(to right, #ffffff, #000000);
+  border-radius: 20px;
+  margin: auto;
+}
+
+/* FEATURES */
+
+.features {
+  color: white;
+  margin-top: 80px;
+}
+
+.featuresHeading h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.featuresList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.fcard {
+  background: rgba(255, 255, 255, 0.85);
+  width: 280px;
+  padding: 25px;
+  border-radius: 20px;
+  color: black;
+
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.4);
+}
+.fcard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.fcard img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.fcardp1 {
+  font-weight: 600;
+}
+
+.fcardp2 {
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: auto;
+  background-color: #cdcdcd;
+  padding: 40px 20px;
+}
+
+.footer1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.ffree {
+  font-weight: 600;
+  font-size: 28px;
+  background: linear-gradient(to right, #0b19de, #666666);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.ffree1 {
+  color: black;
+}
+
+.ffree2 {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ffree2 img {
+  width: 40px;
+}
+
+.fquick {
+  color: black;
+  font-weight: 600;
+}
+
+.flinks1 {
+  list-style: none;
+  padding: 0;
+}
+
+.flinks1 a {
+  text-decoration: none;
+  color: #000000b2;
+}
+
+.footer2 {
+  text-align: center;
+  color: #000000b2;
+  margin-top: 20px;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .main-page {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-side img {
+    width: 280px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .main-page h1 {
+    font-size: 32px;
+  }
+
+  .main-page p {
+    font-size: 16px;
+  }
+
+  .proposal-button {
+    width: 90%;
+  }
+
+  .featuresHeading h1 {
+    font-size: 32px;
+  }
+}
