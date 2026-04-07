@@ -17,7 +17,7 @@ function Navbar() {
             <li>Features</li>
           </a>
 
-          <a href="#proposal">
+          <a href="#paste">
             <li>Generate</li>
           </a>
 
@@ -28,7 +28,9 @@ function Navbar() {
       </div>
 
       <div>
-        <button className="nav-btn">Generate Proposal</button>
+        <button className="nav-btn">
+          <a href="#paste">Generate Proposal</a>
+        </button>
       </div>
     </div>
   );
