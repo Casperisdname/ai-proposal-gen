@@ -7,6 +7,7 @@ function Proposal() {
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [activeTab, setActiveTab] = useState("proposal");
 
   const parseOutput = (text) => {
     if (!text) return {};
@@ -136,10 +137,30 @@ function Proposal() {
       </div>
 
       <div className="proposal-tabs">
-        <button className="tab active">Proposal</button>
-        <button className="tab">Pricing</button>
-        <button className="tab">Risk</button>
-        <button className="tab">Contract</button>
+        <button
+          className={`tab ${activeTab === "proposal" ? "active" : ""}`}
+          onClick={() => setActiveTab("proposal")}
+        >
+          Proposal
+        </button>
+        <button
+          className={`tab ${activeTab === "pricing" ? "active" : ""}`}
+          onClick={() => setActiveTab("pricing")}
+        >
+          Pricing
+        </button>
+        <button
+          className={`tab ${activeTab === "risk" ? "active" : ""}`}
+          onClick={() => setActiveTab("risk")}
+        >
+          Risk
+        </button>
+        <button
+          className={`tab ${activeTab === "contract" ? "active" : ""}`}
+          onClick={() => setActiveTab("contract")}
+        >
+          Contract
+        </button>
       </div>
 
       {output && (
