@@ -202,6 +202,22 @@ body {
   width: 100%;
   margin: 20px auto;
 }
+@media (max-width: 768px) {
+  .proposal-tabs {
+    overflow-x: auto; /* enable horizontal scroll */
+    gap: 8px;
+    padding: 6px;
+    scroll-behavior: smooth;
+  }
+
+  .proposal-tabs::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+  }
+
+  .tab {
+    flex: 0 0 auto; /* make each button shrink/expand properly */
+  }
+}
 .proposal-error {
   background: rgba(255, 80, 80, 0.15);
   border: 1px solid rgba(255, 80, 80, 0.4);
