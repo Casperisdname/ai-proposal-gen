@@ -10,7 +10,10 @@ function MainPage() {
             Paste any job description and instantly get a professional proposal,
             pricing suggestion, and risk analysis.
           </p>
-          <button className="main-btn">Generate Proposal</button>
+          <button className="main-btn">
+            {" "}
+            <a href="#paste">Generate Proposal</a>
+          </button>
         </div>
         <div className="right-side">
           <div className="hero-glow"></div>
