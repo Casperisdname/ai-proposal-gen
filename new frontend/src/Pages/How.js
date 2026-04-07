@@ -7,17 +7,26 @@ function How() {
       <div className="howList">
         <div className="hl">
           <img src={star} />
-          <li>Paste Email</li>
+          <li>User inputs job description</li>
         </div>
         <div className="hl">
           <img src={star} />
-          <li>Get Instant Reply</li>
+          <li>Frontend sends request to FastAPI backend</li>
         </div>
         <div className="hl">
           <img src={star} />
-          <li>Ai Understands Context</li>
+          <li>Backend calls OpenAI with structured prompt</li>
+        </div>
+        <div className="hl">
+          <img src={star} />
+          <li> AI returns formatted response</li>
+        </div>
+        <div className="hl">
+          <img src={star} />
+          <li> Frontend displays structured output</li>
         </div>
       </div>
+
       <div className="howline"></div>
     </div>
   );
