@@ -56,6 +56,10 @@ body {
   border-radius: 20px;
   cursor: pointer;
 }
+.nav-btn a {
+  color: white;
+  text-decoration: none;
+}
 
 /* HERO SECTION */
 
@@ -94,11 +98,19 @@ body {
   font-size: 16px;
   margin-top: 20px;
 }
+.main-btn a {
+  color: white;
+  text-decoration: none;
+}
 
 .right-side {
   position: relative;
 }
-
+.p1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
 .hero-glow {
   position: absolute;
   width: 500px;
@@ -187,8 +199,34 @@ body {
   background: rgba(255, 255, 255, 0.2);
   padding: 6px;
   border-radius: 30px;
-  width: fit-content;
+  width: 100%;
   margin: 20px auto;
+}
+.proposal-error {
+  background: rgba(255, 80, 80, 0.15);
+  border: 1px solid rgba(255, 80, 80, 0.4);
+  color: #ff7a7a;
+
+  padding: 12px 20px;
+  border-radius: 12px;
+
+  width: fit-content;
+  margin: 10px auto 20px;
+
+  font-size: 14px;
+  transition: 0.3ease;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tab {
@@ -233,7 +271,9 @@ body {
 .hl {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
 .hl img {
