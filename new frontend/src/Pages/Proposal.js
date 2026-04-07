@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-const BACKEND_URL = "https://ai-proposal-gen-1.onrender.com"; // your backend
+const BACKEND_URL = "https://ai-proposal-gen-1.onrender.com";
 
 function Proposal() {
   const [jobDescription, setJobDescription] = useState("");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const parseOutput = (text) => {
     if (!text) return {};
@@ -20,12 +21,15 @@ function Proposal() {
     const proposalMatch = text
       .split("=== PROPOSAL ===")[1]
       ?.split("=== PRICING ===")[0];
+
     const pricingMatch = text
       .split("=== PRICING ===")[1]
       ?.split("=== CONTRACT ===")[0];
+
     const contractMatch = text
       .split("=== CONTRACT ===")[1]
       ?.split("=== RISKS ===")[0];
+
     const risksMatch = text.split("=== RISKS ===")[1];
 
     if (proposalMatch) sections.proposal = proposalMatch.trim();
@@ -35,8 +39,17 @@ function Proposal() {
 
     return sections;
   };
+
   const handleGenerate = async () => {
-    if (!jobDescription.trim()) return alert("Paste a job description first!");
+    if (!jobDescription.trim()) {
+      setError("Paste a job description first!");
+
+      setTimeout(() => {
+        setError("");
+      }, 3000);
+
+      return;
+    }
 
     try {
       setLoading(true);
@@ -52,7 +65,11 @@ function Proposal() {
       setOutput(data.output || "No output received");
     } catch (err) {
       console.error(err);
-      alert("Failed to generate proposal");
+      setError("Failed to generate proposal");
+
+      setTimeout(() => {
+        setError("");
+      }, 3000);
     } finally {
       setLoading(false);
     }
@@ -60,6 +77,7 @@ function Proposal() {
 
   return (
     <div
+      id="paste"
       className="proposal-page"
       style={{ textAlign: "center", padding: "50px 20px" }}
     >
@@ -69,12 +87,15 @@ function Proposal() {
       <p className="pheader" style={{ color: "white", fontSize: "28px" }}>
         Proposal Architecture
       </p>
+
       <p
         className="pdescription"
         style={{ color: "white", marginBottom: "20px" }}
       >
         Generate winning proposal drafts in seconds
       </p>
+
+      {error && <div className="proposal-error">{error}</div>}
 
       <input
         className="proposal-input1"
@@ -113,12 +134,14 @@ function Proposal() {
           {loading ? "Generating..." : "Generate Proposal"}
         </button>
       </div>
+
       <div className="proposal-tabs">
         <button className="tab active">Proposal</button>
         <button className="tab">Pricing</button>
         <button className="tab">Risk</button>
         <button className="tab">Contract</button>
       </div>
+
       {output && (
         <div
           className="proposal-output"
